@@ -10,4 +10,17 @@ class Block {
         this.hash = this.calculateHash()
     }
 }
+//BlockChain Class
+
+class BlockChain {
+    constructor(){
+        //first block creation
+        this.chain = [this.createGenesisBlock()];
+    }
+
+    createGenesisBlock() {
+        return new Block(0, new Date().toISOString(), "Genesis Block", "0")
+    }
+}
+
 
