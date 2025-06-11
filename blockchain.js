@@ -16,11 +16,15 @@ class BlockChain {
     constructor(){
         //first block creation
         this.chain = [this.createGenesisBlock()];
+        console.log(this.chain[0])
     }
 
     createGenesisBlock() {
         return new Block(0, new Date().toISOString(), "Genesis Block", "0")
     }
+    
+    getLatestBlock(){
+        return this.chain[this.chain.length - 1];
+    }
+
 }
-
-
